@@ -32,7 +32,25 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.card {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.forms {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: justify;
 }
