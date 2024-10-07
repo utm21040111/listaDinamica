@@ -1,6 +1,6 @@
 
 import { Button, Form } from "react-bootstrap"
-import './formularios.css';
+import './formularios.css'
 
 
 
