@@ -19,13 +19,13 @@ export const ListaDinamica = () => {
 
     // gestionaa el cambio de los valores de los inpus
     const cambioValor = (i, index) => {
-        const newList = [...list]
-        newList[index] = parseFloat(i.target.value) || 0 // actualiza el valor
+        const newList = [...list] //crea una copia del array list
+        newList[index] = parseFloat(i.target.value) || 0 // actualiza el valor, si no hay valor es 0
         setList(newList)
     };
 
     // calcula el total de las cantidades que ingresa
-    const total = list.reduce((acc, val) => acc + val, 0)
+    const total = list.reduce((acumulador, valor) => acumulador + valor, 0)
 
 
 
@@ -37,9 +37,9 @@ export const ListaDinamica = () => {
             </Card>
             <Card>
                 {
-                    list.map((value, index) => (
-                        <div key={index}>
-                            <h4>Valor {index + 1}</h4>
+                    list.map((value, index) => ( // Mapea sobre el array list ,transforma en lsita de componentes 
+                        <div key={index}>{/* asigna una clave unica a cada div */}
+                            <h4>Valor {index + 1}</h4> {/* muestra el valor en la lista del input */}
                             <Form.Control
                                 type="number"
                                 className="mb-3"
